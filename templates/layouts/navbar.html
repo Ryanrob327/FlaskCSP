@@ -3,7 +3,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <img src="{{ url_for('static', filename='assets/ncs_logo.png') }}" width="50" height="50" class="d-inline-block align-center" alt="">
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
+    <a class="navbar-brand" href="https://github.com/Ryanrob327/FlaskCSP">{{basename}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,8 +23,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                     <li><a class="dropdown-item" href={{ url_for('projects.week05') }}>Week 05</a></li>
-                    <!-- <li><a class="dropdown-item" href={{ url_for('projects.week06') }}>Week 06</a></li>
-                    <li><a class="dropdown-item" href={{ url_for('projects.week07') }}>Week 07</a></li>
+                    <li><a class="dropdown-item" href={{ url_for('projects.week06') }}>Week 06</a></li>
+                    <!--<li><a class="dropdown-item" href={{ url_for('projects.week07') }}>Week 07</a></li>
                     <li><a class="dropdown-item" href={{ url_for('projects.week08') }}>Week 08</a></li>-->
                 </ul>
             </li>
