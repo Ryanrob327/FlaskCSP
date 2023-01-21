@@ -123,7 +123,15 @@ def initUsers():
     u3 = User(name='Gandolf', email='wizard456@gmail.com', password='Password3')
     u4 = User(name='Sauron', email='evilEye789@gmail.com', password='Password4')
     u5 = User(name='Frodo Baggins', email='hobbit1011@TheShire.com', password='Password5')
+    u6 = User(name='Gimbli', email='Dwarf@gmail.com', password='Password6')
     
-
-    users = [u1, u2, u3, u4, u5]
+    users = [u1, u2, u3, u4, u5, u6]
+    
             
+    for user in users:
+        try:
+            user.create()
+        except IntegrityError:
+            '''fails with bad or duplicate data'''
+            db.session.remove()
+            print(f"Records exist, duplicate email, or error: {user.uid}")
